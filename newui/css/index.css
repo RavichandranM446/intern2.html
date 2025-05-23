@@ -1091,10 +1091,12 @@ header {
         }
 
         .testimonial-header {
-            padding: 25px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
+             position: relative;
+  background-color: #00c292; /* or your header color */
+  padding-top: 60px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
         }
 
         .testimonial-image {
