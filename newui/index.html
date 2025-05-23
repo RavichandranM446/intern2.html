@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cappriciosec University - Cyber Security Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Header -->
+<header>
+        <div class="container header-container">
+            <img src="https://university.cappriciosec.com/university-logo.png" class="logo" alt="">
+         
+            <div class="header-actions">
+              <img src="https://university.cappriciosec.com/google-play-badge.png" alt="">
+            </div>
+        </div>
+        
+    </header>
+
+
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slides" id="slides">
+            <div class="slide" style="background-image: url('images/Web_Banner1.webp');">
+               
+            </div>
+            <div class="slide" style="background-image: url('images/Web_Banner2.webp');">
+                <div class="slide-content">
+                   
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/Web_Banner3.webp');">
+               
+            </div>
+        </div>
+        <div class="slider-nav" id="sliderNav"></div>
+        <div class="slider-arrow slider-prev" id="sliderPrev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="slider-arrow slider-next" id="sliderNext">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </section>
+
+
+<!-- Search Section -->
+    <section class="search-section">
+        <div class="container search-container">
+            <div class="search-box">
+                <input type="text" id="courseSearch" placeholder="Search for courses...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+
+
+
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="cybersecurity">Cyber Security</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="hardware">Hardware</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Courses</h2>
+
+            <div id="courseContainer" class="course-grid">
+               <div class="course-card" data-id="cs101">
+                        <div class="course-image" style="background-image: url('/placeholder.svg?height=400&amp;width=600');">
+                            <div class="course-level">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-tag">cybersecurity</span>
+                            <h3 class="course-title">Introduction to Cyber Security</h3>
+                            <p class="course-description">Learn the fundamentals of cyber security and protect yourself online.</p>
+                            
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">J</div>
+                                <div class="instructor-name">John Smith</div>
+                            </div>
+                            
+                            <div class="course-stats">
+                                <div><i class="fas fa-clock"></i> 6 weeks</div>
+                                <div><i class="fas fa-video"></i> 24 lectures</div>
+                            </div>
+                            
+                            <div class="course-meta">
+                                <div class="course-price">$49.99</div>
+                                <div class="course-rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </div>
+                            </div>
+                            <a href="#" class="btn view-course" style="width: 100%; margin-top: 15px;" data-id="cs101">View Course</a>
+                        </div>
+                    </div>
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<center><h2 class="wetrained">Institutions We've Trained <br>& Been Trusted By</h2></center>
+<div class="client-slider">
+     
+  <div class="slide-track"></div>
+</div> 
+    <!-- Categories Section -->
+    <section class="section categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Course Categories</h2>
+            <p class="section-subtitle">Browse our wide range of specialized courses designed to help you master the skills needed in today's digital landscape.</p>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cyber Security</h3>
+                    <p>Learn to protect systems, networks, and programs from digital attacks with our comprehensive cyber security courses.</p>
+                    <a href="#" class="btn" data-filter="cybersecurity">Explore</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-code"></i></div>
+                    <h3>Development</h3>
+                    <p>Master programming languages and development frameworks to build secure and efficient applications.</p>
+                    <a href="#" class="btn" data-filter="development">Explore</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Hardware</h3>
+                    <p>Understand the physical components of computing systems and learn hardware security principles.</p>
+                    <a href="#" class="btn" data-filter="hardware">Explore</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Networking</h3>
+                    <p>Learn the fundamentals of computer networking, protocols, and secure network design principles.</p>
+                    <a href="#" class="btn" data-filter="networking">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 id="courseCount">10+</h3>
+                    <p>Expert Courses</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5k+</h3>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- CTA Section -->
+ 
+  <section class="testimonials section">
+        <div class="container">
+            <h2 class="section-title">Success Stories from Our Students</h2>
+            <p class="section-subtitle">Hear from our graduates who have transformed their careers with our courses</p>
+            
+            <div class="testimonial-container" id="testimonialContainer">
+                <div class="testimonial-scroll" id="testimonialScroll">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://avatars.githubusercontent.com/u/33289300?v=4" alt="Sarah Johnson" class="testimonial-image">
+                            <h3 class="testimonial-name">Sarah Johnson</h3>
+                            <p class="testimonial-achievement">Certified Ethical Hacker</p>
+                            <div class="testimonial-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">The Ethical Hacking Masterclass completely transformed my career. Within three months of completing the course, I landed a job as a security analyst at a major tech company with a 40% salary increase!</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">TechSecure Inc.</span>
+                                <span class="testimonial-position">Security Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="Michael Chen" class="testimonial-image">
+                            <h3 class="testimonial-name">Michael Chen</h3>
+                            <p class="testimonial-achievement">Network Security Specialist</p>
+                            <div class="testimonial-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">I had no prior experience in cybersecurity when I started. The structured curriculum and hands-on labs gave me practical skills that I use daily in my new role. I now lead a team of security professionals!</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">Global Networks</span>
+                                <span class="testimonial-position">Security Team Lead</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="Emily Rodriguez" class="testimonial-image">
+                            <h3 class="testimonial-name">Emily Rodriguez</h3>
+                            <p class="testimonial-achievement">Secure Software Developer</p>
+                            <div class="testimonial-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">The Secure Web Development course helped me transition from a regular developer to a security-focused role. The instructors were incredibly knowledgeable and supportive throughout my learning journey.</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">FinTech Solutions</span>
+                                <span class="testimonial-position">Lead Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="David Wilson" class="testimonial-image">
+                            <h3 class="testimonial-name">David Wilson</h3>
+                            <p class="testimonial-achievement">IoT Security Expert</p>
+                            <div class="testimonial-rating">
+                                ★★★★☆
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">The IoT Security course was exactly what I needed to specialize in this growing field. The practical projects allowed me to build a portfolio that impressed my current employer during the interview process.</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">Smart Systems Inc.</span>
+                                <span class="testimonial-position">Security Architect</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="Jennifer Lee" class="testimonial-image">
+                            <h3 class="testimonial-name">Jennifer Lee</h3>
+                            <p class="testimonial-achievement">Cloud Security Specialist</p>
+                            <div class="testimonial-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">After completing the Cloud Security course, I was able to implement robust security measures for my company's cloud infrastructure. This led to a promotion and a significant salary increase within six months!</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">CloudTech Solutions</span>
+                                <span class="testimonial-position">Senior Security Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="Robert Taylor" class="testimonial-image">
+                            <h3 class="testimonial-name">Robert Taylor</h3>
+                            <p class="testimonial-achievement">Digital Forensics Investigator</p>
+                            <div class="testimonial-rating">
+                                ★★★★☆
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">The Digital Forensics course provided me with the specialized skills I needed to transition from general IT to forensic investigation. The certification helped me secure a position with a government agency.</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">Government Agency</span>
+                                <span class="testimonial-position">Forensic Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="Sophia Martinez" class="testimonial-image">
+                            <h3 class="testimonial-name">Sophia Martinez</h3>
+                            <p class="testimonial-achievement">Security Compliance Manager</p>
+                            <div class="testimonial-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">The Security Compliance course gave me a comprehensive understanding of regulatory frameworks. I was able to implement compliant security practices that saved my company from potential fines and penalties.</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">Healthcare Systems</span>
+                                <span class="testimonial-position">Compliance Director</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/placeholder.svg?height=200&width=200" alt="James Thompson" class="testimonial-image">
+                            <h3 class="testimonial-name">James Thompson</h3>
+                            <p class="testimonial-achievement">Blockchain Security Expert</p>
+                            <div class="testimonial-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">The Blockchain Security course was cutting-edge and provided me with skills that are in high demand. I now work as a consultant for multiple blockchain projects, earning three times my previous salary.</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-company">Blockchain Ventures</span>
+                                <span class="testimonial-position">Security Consultant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-controls">
+                    <button class="scroll-btn" id="scrollLeft">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="scroll-btn" id="scrollRight">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="scroll-indicator" id="scrollIndicator">
+                    <!-- Dots will be added dynamically -->
+                </div>
+                
+                <div class="auto-scroll-control">
+                    <button class="auto-scroll-btn active" id="autoScrollToggle">
+                        <i class="fas fa-pause" id="autoScrollIcon"></i>
+                        <span id="autoScrollText">Pause Auto-Scroll</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Cappriciosec University</h2>
+            <p class="section-subtitle">We are dedicated to providing high-quality education in cyber security and related fields.</p>
+            
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 20px; line-height: 1.8; color: var(--dark-gray);">
+                    Cappriciosec University is a premier online learning platform specializing in cyber security, development, and hardware courses. Our mission is to empower individuals with the knowledge and skills needed to excel in the rapidly evolving tech industry.
+                </p>
+                <p style="margin-bottom: 20px; line-height: 1.8; color: var(--dark-gray);">
+                    Our courses are designed by industry experts with years of practical experience, ensuring that you receive the most relevant and up-to-date education. Whether you're a beginner looking to start your journey in tech or a professional aiming to upskill, we have courses tailored to your needs.
+                </p>
+                <p style="line-height: 1.8; color: var(--dark-gray);">
+                    Join our community of learners and gain access to hands-on projects, real-world case studies, and a supportive learning environment that will help you achieve your career goals.
+                </p>
+            </div>
+        </div>
+    </section>
+<section class="section">
+    <h2 class="title animate__animated animate__fadeInDown">🔥 Learn by Doing</h2>
+    <div class="card-container" id="cardContainer"></div>
+  </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cappriciosec University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Detail Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+    <script src="js/dynamic.js?v=1"></script>
+<script src="js/index.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("courseContainer");
+
+    fetch("https://raw.githubusercontent.com/Cappricio-Securities/Cappriciosec-University/refs/heads/main/course.json")
+        .then(res => res.json())
+        .then(data => {
+            const courseList = data.Course || [];
+             const mentor = data["CEHPT"]["Mentor"];
+
+            container.innerHTML = ""; // Clear existing placeholder cards
+
+            courseList.forEach(courseKey => {
+                const course = data[courseKey];
+                if (!course) return;
+                
+                
+                const card = document.createElement("div");
+                card.className = "course-card";
+                card.dataset.id = courseKey.toLowerCase();
+             
+                card.innerHTML = `
+                    <div class="course-image" style="background-image: url('${course.banner || '/placeholder.svg?height=400&width=600'}');">
+                        <div class="course-level">${course.Language || 'Beginner'}</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Cybersecurity</span>
+                        <h3 class="course-title">${course.title}</h3>
+                        <p class="course-description">${course["Short Description"]}</p>
+
+                        <div class="course-instructor">
+                            <div class="instructor-avatar"><img src="${course.Mentor?.image || 'c' }"></div>
+                            <div class="instructor-name">${course.Mentor?.name || 'Unknown Mentor'}</div>
+                        </div>
+
+                        <div class="course-stats">
+                            <div><i class="fas fa-clock"></i> ${course.Duration}</div>
+                            <div><i class="fas fa-video"></i> Pre-Recoded</div>
+                        </div>
+
+                        <div class="course-meta">
+                            <div class="course-price">
+    ${course["offer price"]
+        ? `<del style="color: grey;">₹${course.price}</del> <span style="color: green;">₹${course["offer price"]}</span>`
+        : `₹${course.price}`}
+</div>
+                            <div class="course-rating"><i class="fas fa-star"></i> ${course.Starts || "4.8"}</div>
+                        </div>
+
+                        <a href="${course["Enroll now"]}" target="_blank" class="btn view-course" style="width: 100%; margin-top: 15px;" data-id="${courseKey.toLowerCase()}">View Course</a>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        })
+        .catch(err => {
+            console.error("Failed to load course data:", err);
+            document.getElementById("courseContainer").innerHTML = `<p style="color:red;">Failed to load courses. Please try again later.</p>`;
+        });
+});
+</script>
+  <script>
+        // Testimonial Scrolling Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollContainer = document.getElementById('testimonialScroll');
+            const testimonialContainer = document.getElementById('testimonialContainer');
+            const scrollLeftBtn = document.getElementById('scrollLeft');
+            const scrollRightBtn = document.getElementById('scrollRight');
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            const autoScrollToggle = document.getElementById('autoScrollToggle');
+            const autoScrollIcon = document.getElementById('autoScrollIcon');
+            const autoScrollText = document.getElementById('autoScrollText');
+            
+            // Auto-scroll variables
+            let autoScrollInterval;
+            let isAutoScrolling = true;
+            const autoScrollDelay = 5000; // 5 seconds between slides
+            
+            // Calculate the number of visible cards
+            const cardWidth = testimonialCards[0].offsetWidth;
+            const containerWidth = scrollContainer.offsetWidth;
+            const visibleCards = Math.floor(containerWidth / cardWidth);
+            const scrollAmount = cardWidth + 30; // card width + gap
+            
+            // Create indicator dots
+            const totalDots = Math.ceil(testimonialCards.length / visibleCards);
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('scroll-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    scrollContainer.scrollLeft = i * visibleCards * scrollAmount;
+                    resetAutoScroll(); // Reset auto-scroll timer when manually navigating
+                });
+                scrollIndicator.appendChild(dot);
+            }
+            
+            // Scroll left button
+            scrollLeftBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+                resetAutoScroll(); // Reset auto-scroll timer when manually navigating
+            });
+            
+            // Scroll right button
+            scrollRightBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+                resetAutoScroll(); // Reset auto-scroll timer when manually navigating
+            });
+            
+            // Update active dot on scroll
+            scrollContainer.addEventListener('scroll', () => {
+                const scrollPosition = scrollContainer.scrollLeft;
+                const activeIndex = Math.round(scrollPosition / (visibleCards * scrollAmount));
+                
+                document.querySelectorAll('.scroll-dot').forEach((dot, index) => {
+                    if (index === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    scrollContainer.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
+                    resetAutoScroll(); // Reset auto-scroll timer when manually navigating
+                } else if (e.key === 'ArrowRight') {
+                    scrollContainer.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                    resetAutoScroll(); // Reset auto-scroll timer when manually navigating
+                }
+            });
+            
+            // Auto-scroll function
+            function startAutoScroll() {
+                if (isAutoScrolling) {
+                    autoScrollInterval = setInterval(() => {
+                        // Check if we've reached the end, if so, go back to the beginning
+                        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - containerWidth - 10) {
+                            scrollContainer.scrollTo({
+                                left: 0,
+                                behavior: 'smooth'
+                            });
+                        } else {
+                            scrollContainer.scrollBy({
+                                left: scrollAmount,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, autoScrollDelay);
+                }
+            }
+            
+            // Reset auto-scroll timer
+            function resetAutoScroll() {
+                if (isAutoScrolling) {
+                    clearInterval(autoScrollInterval);
+                    startAutoScroll();
+                }
+            }
+            
+            // Toggle auto-scroll
+            autoScrollToggle.addEventListener('click', () => {
+                isAutoScrolling = !isAutoScrolling;
+                
+                if (isAutoScrolling) {
+                    autoScrollIcon.className = 'fas fa-pause';
+                    autoScrollText.textContent = 'Pause Auto-Scroll';
+                    autoScrollToggle.classList.add('active');
+                    startAutoScroll();
+                } else {
+                    autoScrollIcon.className = 'fas fa-play';
+                    autoScrollText.textContent = 'Resume Auto-Scroll';
+                    autoScrollToggle.classList.remove('active');
+                    clearInterval(autoScrollInterval);
+                }
+            });
+            
+            // Pause auto-scroll on hover
+            testimonialContainer.addEventListener('mouseenter', () => {
+                if (isAutoScrolling) {
+                    clearInterval(autoScrollInterval);
+                }
+            });
+            
+            // Resume auto-scroll when mouse leaves
+            testimonialContainer.addEventListener('mouseleave', () => {
+                if (isAutoScrolling) {
+                    startAutoScroll();
+                }
+            });
+            
+            // Start auto-scroll initially
+            startAutoScroll();
+            
+            // Handle touch events for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            scrollContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                // Pause auto-scroll on touch
+                if (isAutoScrolling) {
+                    clearInterval(autoScrollInterval);
+                }
+            }, { passive: true });
+            
+            scrollContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                // Resume auto-scroll after touch
+                if (isAutoScrolling) {
+                    startAutoScroll();
+                }
+            }, { passive: true });
+            
+            function handleSwipe() {
+                // Reset auto-scroll timer when manually swiping
+                resetAutoScroll();
+            }
+        });
+          fetch('lbd.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('cardContainer');
+
+    data.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.className = 'card animate__animated animate__fadeInUp';
+      card.style.animationDelay = `${index * 0.2}s`;
+
+      card.innerHTML = `
+        <div class="icon">${item.icon}</div>
+        <div class="card-title">${item.title}</div>
+        <div class="card-description">${item.description}</div>
+        <span class="card-tag">${item.tag}</span>
+      `;
+
+      container.appendChild(card);
+    });
+  })
+  .catch(err => {
+    console.error('Failed to load JSON:', err);
+  });
+    </script>
+  
+</body>
+</html>

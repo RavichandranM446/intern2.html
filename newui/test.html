@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonial Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+    }
+
+    .testimonial-section {
+      padding: 50px 20px;
+      background: #f9f9f9;
+    }
+
+    .testimonial-scroll-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+
+    .testimonial-card {
+      flex: 0 0 auto;
+      width: 280px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: scale(1.03);
+    }
+
+    .testimonial-header {
+      text-align: center;
+    }
+
+    .testimonial-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: #00c389;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+      margin: 0;
+    }
+
+    .testimonial-achievement {
+      font-size: 14px;
+      color: #fff;
+      background: #00c389;
+      padding-bottom: 10px;
+      border-radius: 0 0 10px 10px;
+      margin: 0;
+    }
+
+    .testimonial-rating {
+      color: #ffd700;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .testimonial-content {
+      margin-top: 15px;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .testimonial-meta {
+      font-style: italic;
+      margin-top: 10px;
+      color: #666;
+    }
+
+    .scroll-controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .scroll-btn {
+      background: #00c389;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 18px;
+      margin: 0 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .scroll-btn:hover {
+      background: #009f6b;
+    }
+  </style>
+</head>
+<body>
+
+<section class="testimonial-section">
+  <div class="testimonial-scroll-wrapper" id="testimonialWrapper">
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <img src="https://via.placeholder.com/80" alt="Jennifer Lee" class="testimonial-image">
+        <h3 class="testimonial-name">Jennifer Lee</h3>
+        <p class="testimonial-achievement">Cloud Security Specialist</p>
+        <div class="testimonial-rating">★★★★★</div>
+      </div>
+      <div class="testimonial-content">
+        After completing the Cloud Security course, I was able to implement robust security measures for my company's cloud infrastructure. This led to a promotion and a significant salary increase within six months!
+        <div class="testimonial-meta">CloudTech Solutions<br>Senior Security Engineer</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <img src="https://via.placeholder.com/80" alt="Robert Taylor" class="testimonial-image">
+        <h3 class="testimonial-name">Robert Taylor</h3>
+        <p class="testimonial-achievement">Digital Forensics Investigator</p>
+        <div class="testimonial-rating">★★★★☆</div>
+      </div>
+      <div class="testimonial-content">
+        The Digital Forensics course provided me with the specialized skills I needed to transition from general IT to forensic investigation. The certification helped me secure a position with a government agency.
+        <div class="testimonial-meta">Government Agency<br>Forensic Analyst</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <img src="https://via.placeholder.com/80" alt="Sophia Martinez" class="testimonial-image">
+        <h3 class="testimonial-name">Sophia Martinez</h3>
+        <p class="testimonial-achievement">Security Compliance Manager</p>
+        <div class="testimonial-rating">★★★★★</div>
+      </div>
+      <div class="testimonial-content">
+        The Security Compliance course gave me a comprehensive understanding of regulatory frameworks. I was able to implement compliant security practices that saved my company from potential fines and penalties.
+        <div class="testimonial-meta">Healthcare Systems<br>Compliance Director</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <img src="https://via.placeholder.com/80" alt="James Thompson" class="testimonial-image">
+        <h3 class="testimonial-name">James Thompson</h3>
+        <p class="testimonial-achievement">Blockchain Security Expert</p>
+        <div class="testimonial-rating">★★★★★</div>
+      </div>
+      <div class="testimonial-content">
+        The Blockchain Security course was cutting-edge and provided me with skills that are in high demand. I now work as a consultant for multiple blockchain projects, earning three times my previous salary.
+        <div class="testimonial-meta">Blockchain Ventures<br>Security Consultant</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroll-controls">
+    <button class="scroll-btn" onclick="scrollTestimonials('left')"><i class="fas fa-chevron-left"></i></button>
+    <button class="scroll-btn" onclick="scrollTestimonials('right')"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<script>
+  function scrollTestimonials(direction) {
+    const wrapper = document.getElementById('testimonialWrapper');
+    const scrollAmount = 300;
+    if (direction === 'left') {
+      wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+</html>
